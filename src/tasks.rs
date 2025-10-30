@@ -133,7 +133,7 @@ impl Task {
         self.status = TaskStatus::Completed;
         self.http_client
             .post(format!(
-                "/open/v1/project/{}/task/{}/complete",
+                "https://ticktick.com/open/v1/project/{}/task/{}/complete",
                 self.project_id.0, self.id.0
             ))
             .json(self)
