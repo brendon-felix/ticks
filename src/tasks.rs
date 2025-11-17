@@ -7,7 +7,7 @@ use crate::{ticktick_datetime_format, TickTick, TickTickError};
 use super::{builders::TaskBuilder, projects::ProjectID};
 
 /// ID used to identify Tasks from TickTick.
-#[derive(Serialize, Deserialize, Default, Debug, Clone)]
+#[derive(Serialize, Deserialize, Default, Debug, Clone, PartialEq, Eq, Hash)]
 #[serde(transparent)]
 pub struct TaskID(pub String);
 
