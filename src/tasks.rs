@@ -146,7 +146,7 @@ impl Task {
 
 /// Enum matching Task Priority values listed in the Task API Reference
 /// [API Reference](https://developer.ticktick.com/docs/index.html#/openapi?id=task-1)
-#[derive(Serialize_repr, Deserialize_repr, Debug, Default)]
+#[derive(Serialize_repr, Deserialize_repr, Debug, Default, Clone, Copy, PartialEq, Eq)]
 #[repr(u8)]
 pub enum TaskPriority {
     #[default]
@@ -158,7 +158,7 @@ pub enum TaskPriority {
 
 /// Enum matching Task Status values listed in the Task API Reference
 /// [API Reference](https://developer.ticktick.com/docs/index.html#/openapi?id=task-1)
-#[derive(Serialize_repr, Deserialize_repr, Debug, Default)]
+#[derive(Serialize_repr, Deserialize_repr, Debug, Default, Clone, Copy, PartialEq, Eq)]
 #[repr(u8)]
 pub enum TaskStatus {
     #[default]
@@ -168,7 +168,7 @@ pub enum TaskStatus {
 
 /// Enum matching Subtask Status values listed in the ChecklistItem API Reference
 /// [API Reference](https://developer.ticktick.com/docs/index.html#/openapi?id=checklistitem)
-#[derive(Serialize_repr, Deserialize_repr, Debug, Default)]
+#[derive(Serialize_repr, Deserialize_repr, Debug, Default, Clone, Copy, PartialEq, Eq)]
 #[repr(u8)]
 pub enum SubtaskStatus {
     #[default]
